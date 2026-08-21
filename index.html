@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nik Merrow" />
+    <meta
+      name="description"
+      content="A flashcard app designed to help students learn, practice, and study software engineering concepts."
+    />
+    <meta
+      name="keywords"
+      content="flashcards, software engineering, coding, programming, study tool, web development, tech skills, interview prep"
+    />
+    <title>Practice Cards for Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/vendor/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <h1 class="header__title">
+        <a class="header__link" href="#home">Flash Cards</a>
+      </h1>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="#home">My Decks</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page__main-content">
+      <section id="home" class="decks">
+        <h2 class="decks__title" id="my-decks-section">My Decks</h2>
+        <ul class="decks__list">
+          <template id="deck-template">
+            <li class="deck deck_color_green">
+              <h2 class="deck__title"></h2>
+              <div class="deck__row">
+                <p class="deck__count"></p>
+                <button
+                  class="deck__delete-btn"
+                  type="button"
+                  aria-label="Delete deck"
+                >
+                  <img
+                    class="deck__delete-icon"
+                    src="assets/images/delete.svg"
+                    alt="Delete deck icon"
+                  />
+                </button>
+              </div>
+              
+              <a class="deck__link" href="#"></a>
+            </li>
+          </template>
+        </ul>
+        <button
+          class="decks__new-deck-btn"
+          type="button"
+          aria-label="Create a new deck"
+        >
+          + New Deck
+        </button>
+      </section>
+      <section id="about" class="page__section">
+        <h2 class="page__title">About</h2>
+        <p class="page__text">
+          A flashcard app for practicing coding concepts.
+        </p>
+      </section>
+      <section id="not-found" class="page__section">
+        <h2 class="page__title">404 — Not Found</h2>
+        <p class="page__text">The page you’re looking for doesn’t exist.</p>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">&copy;2026 Nikolas Merrow</p>
+    </footer>
+    <script src="./assets/js/index.js" type="module"></script>
+  </body>
+</html>

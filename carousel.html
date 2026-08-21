@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nik Merrow" />
+    <meta
+      name="description"
+      content="Flashcard carousel for studying software engineering concepts."
+    />
+    <title>Practice Cards for Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/vendor/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <h1 class="header__title">
+        <a class="header__link" href="index.html#home">Flash Cards</a>
+      </h1>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="index.html#home">My Decks</a></li>
+          <li><a class="nav__link" href="index.html#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page__main-content page__main-content_location_carousel">
+      <section  id="carousel" class="carousel">
+        <h2 class="carousel__title">Decks &middot; Language</h2>
+        <div class="carousel__content">
+          <button
+            type="button"
+            aria-label="Go to previous card in deck"
+            class="carousel__btn carousel__btn_type_left carousel__btn_disabled"
+          ></button>
+          <div class="carousel__card carousel__card_color_green">
+            <p class="carousel__card-text">&lt;body&gt; &lt;/body&gt;</p>
+          </div>
+          <button
+            type="button"
+            aria-label="Go to next card in deck"
+            class="carousel__btn carousel__btn_type_right"
+          ></button>
+        </div>
+        <button
+          type="button"
+          aria-label="Flip card"
+          class="carousel__btn carousel__btn_type_flip"
+        ></button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">&copy;2026 Nikolas Merrow</p>
+    </footer>
+
+    <script src="./assets/js/carousel.js" type="module"></script>
+  </body>
+</html>
