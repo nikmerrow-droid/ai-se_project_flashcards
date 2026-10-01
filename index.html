@@ -56,7 +56,7 @@
                   />
                 </button>
               </div>
-              
+
               <a class="deck__link" href="#"></a>
             </li>
           </template>
@@ -67,6 +67,56 @@
           aria-label="Create a new deck"
         >
           + New Deck
+        </button>
+      </section>
+      <section id="deck" class="decks">
+        <div class="decks__header">
+          <h2 class="decks__title" id="deck-section-title">Deck</h2>
+          <button
+            class="decks__practice-btn"
+            type="button"
+            aria-label="Practice this deck"
+          >
+            Practice
+          </button>
+        </div>
+        <ul class="decks__list" id="deck-cards">
+          <template id="card-template">
+            <li class="deck deck_color_green">
+              <p class="deck__text"></p>
+              <div class="deck__row">
+                <button
+                  class="deck__flip-btn"
+                  type="button"
+                  aria-label="Flip card"
+                >
+                  <img
+                    class="deck__icon"
+                    src="assets/images/flip.svg"
+                    alt="Flip card icon"
+                  />
+                </button>
+                <button
+                  class="deck__delete-btn"
+                  type="button"
+                  aria-label="Delete card"
+                >
+                  <img
+                    class="deck__delete-icon"
+                    src="assets/images/delete.svg"
+                    alt="Delete card icon"
+                  />
+                </button>
+              </div>
+            </li>
+          </template>
+        </ul>
+        <button
+          class="decks__new-card-btn"
+          type="button"
+          aria-label="Create a new card"
+        >
+          + New Card
         </button>
       </section>
       <section id="about" class="page__section">

@@ -117,6 +117,14 @@ body {
   gap: 20px 20px;
 }
 
+.decks__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
 .decks__title {
   font-weight: 700;
   font-size: 40px;
@@ -124,6 +132,25 @@ body {
   margin-top: 60px;
   margin-bottom: 40px;
   flex-basis: 100%;
+}
+
+.decks__practice-btn {
+  width: 103px;
+  height: 44px;
+  padding: 12px 16px 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--Black-Black, #1a1a1a);
+  color: #ffffff;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .decks__list {
@@ -136,7 +163,8 @@ body {
   width: 100%;
 }
 
-.decks__new-deck-btn {
+.decks__new-deck-btn,
+.decks__new-card-btn {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -155,7 +183,8 @@ body {
   margin-top: 0;
 }
 
-.decks__new-deck-btn:hover {
+.decks__new-deck-btn:hover,
+.decks__new-card-btn:hover {
   background-color: #c5c5c5;
   color: #1a1a1a;
 }
@@ -192,10 +221,20 @@ body {
   line-height: 1.2;
 }
 
+.deck__text {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
 .deck__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin-top: auto;
 }
 
 .deck__count {
@@ -204,25 +243,47 @@ body {
   font-weight: 400;
 }
 
-.deck__delete-btn {
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-  border: none;
-  opacity: 50%;
+.deck__delete-btn,
+.deck__flip-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(26, 26, 26, 0.7);
+  border-radius: 50%;
+  opacity: 0.7;
   cursor: pointer;
   padding: 0;
   z-index: 1;
 }
 
-.deck__delete-icon {
-  width: 100%;
-  height: 100%;
-  display: block;
+.deck__delete-btn:hover,
+.deck__flip-btn:hover {
+  opacity: 1;
 }
 
-.deck__delete-btn:hover {
-  opacity: 1;
+.deck__icon,
+.deck__delete-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  opacity: 0.9;
+}
+
+.deck__flip-btn {
+  background-image: url("../images/flip.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+.deck__delete-btn {
+  background-image: url("../images/delete.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
 }
 
 .deck_color_green {
