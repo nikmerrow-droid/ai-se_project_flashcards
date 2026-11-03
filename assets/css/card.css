@@ -1,0 +1,129 @@
+.deck {
+  box-sizing: border-box;
+  max-width: 325px;
+  width: 100%;
+  height: 205px;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.deck__title,
+.deck__text {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.deck__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deck__count {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  z-index: 2;
+}
+
+.deck__delete-btn {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.deck__delete-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.deck__link {
+  position: absolute;
+  inset: 0;
+  display: block;
+  border-radius: inherit;
+  color: transparent;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.card__btn {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(26, 26, 26, 0.7);
+  border-radius: 50%;
+  opacity: 0.7;
+  cursor: pointer;
+  padding: 0;
+}
+
+.card__btn:hover {
+  opacity: 1;
+}
+
+.card__btn_type_flip,
+.card__btn_type_delete {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+.card__btn_type_flip {
+  background-image: url("../images/flip.svg");
+}
+
+.card__btn_type_delete {
+  background-image: url("../images/delete.svg");
+}
+
+.deck_color_green {
+  background-color: #64d583;
+}
+
+.deck_color_blue {
+  background-color: #91a8f9;
+}
+
+.deck_color_pink {
+  background-color: #ee92d7;
+}
+
+.deck_color_purple {
+  background-color: #aa8ef0;
+}
+
+.deck_color_orange {
+  background-color: #ee955e;
+}
+
+.deck_color_yellow {
+  background-color: #f5d770;
+}
+
+.deck.deck_answer_showing {
+  background-color: #fff;
+}

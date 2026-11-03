@@ -1,4 +1,4 @@
-import { decks } from "./decks.js";
+import { decks, getDeckByID } from "./decks.js";
 import { hexToString, removeColorClasses } from "./colors.js";
 
 function getCarouselTitleString(deckName, index, total) {
@@ -14,23 +14,24 @@ function getDeckFromLocation() {
     if (deck) return deck;
   }
 
-  const hashDeckId = window.location.hash.replace("#carousel/", "").trim();
-  if (hashDeckId) {
-    const deck = decks.find((item) => item.id === hashDeckId);
-    if (deck) return deck;
-  }
+  const hash = window.location.hash;
+  const deckID = hash.split("/")[1];
+  const currentDeck = getDeckByID(deckID);
+  if (currentDeck) return currentDeck;
 
   return decks[0];
 }
 
 export function renderCarouselView(deck) {
   const homeSection = document.querySelector("#home");
+  const deckSection = document.querySelector("#deck");
   const aboutSection = document.querySelector("#about");
   const notFoundSection = document.querySelector("#not-found");
   const carouselSection = document.querySelector("#carousel");
   const mainContent = document.querySelector(".page__main-content");
 
   if (homeSection) homeSection.style.display = "none";
+  if (deckSection) deckSection.style.display = "none";
   if (aboutSection) aboutSection.style.display = "none";
   if (notFoundSection) notFoundSection.style.display = "none";
   if (carouselSection) carouselSection.style.display = "flex";
