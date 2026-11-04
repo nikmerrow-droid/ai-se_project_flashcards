@@ -41,3 +41,40 @@
   }
 
 }
+@media (max-width: 393px) {
+  .gallery__new-deck-btn {
+    position: fixed;
+    padding: 16px, 24px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 100%;
+    border-radius: 8px;
+    background: var(--Black-Black, rgba(26, 26, 26, 1));
+    width: calc(100% - 40px);
+    max-width: 353px;
+    aspect-ratio: auto;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+  }
+  .page {
+    padding-bottom: 100px;
+  }
+  .page::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 156px;
+    background: linear-gradient(transparent, #ececec 35%);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
