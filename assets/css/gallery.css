@@ -20,7 +20,8 @@
   width: 100%;
 }
 
-.gallery__new-card-btn {
+.gallery__new-card-btn,
+.gallery__new-deck-btn {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
