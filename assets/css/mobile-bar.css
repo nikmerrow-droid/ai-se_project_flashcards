@@ -2,7 +2,7 @@
   .header {
     padding: 20px;
   }
-  
+
   .header__title {
     font-size: 20px;
     letter-spacing: -1px;
@@ -12,10 +12,9 @@
     font-weight: 500;
     font-style: medium;
     font-size: 16px;
-    letter-spacing: 0%
-    ;
+    letter-spacing: 0%;
   }
-  
+
   .gallery__title {
     font-size: 32px;
   }
@@ -39,7 +38,6 @@
   .deck-card__title {
     font-size: 24px;
   }
-
 }
 @media (max-width: 393px) {
   .gallery__new-deck-btn {
@@ -79,24 +77,33 @@
     pointer-events: none;
     z-index: 1;
   }
-  .gallery__new-card-btn, 
+  .gallery__new-card-btn,
   .gallery__practice-btn {
     width: 170px;
     position: fixed;
     height: 44px;
     border-radius: 8px;
-    padding: 12px, 16px, 14px;
+    padding-top: 12px;
+    margin-bottom: 16px;
     gap: 10px;
     font-weight: 500px;
     font-size: 18px;
     z-index: 2;
+    box-sizing: border-box;
+    bottom: 75px;
   }
-  .gallery__new-card-btn {
+  .gallery__new-card-btn_location_deck-view {
     background-color: #cccccc 80%;
     color: #1a1a1a 50%;
+    left: 16px;
+    right: auto;
+    width: calc(50% - 6px - 20.5px);
   }
   .gallery__practice-btn {
     background-color: #1a1a1a;
     color: #fff;
+    right: 16px;
+    left: auto;
+    width: calc(50% - 6px - 20.5px);
   }
 }
